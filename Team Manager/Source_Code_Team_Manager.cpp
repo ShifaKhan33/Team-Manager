@@ -229,7 +229,10 @@ int main()
     for(auto i : Projects){
         tooutputfile<<i.first<<endl;
         for(auto j: i.second){
-            tooutputfile<<j.first<<" : "<<j.second.first<<" ; ";
+            if(j.second.first=="None")
+                tooutputfile<<j.first<<" : Mentored ; ";
+            else
+                tooutputfile<<j.first<<" : "<<j.second.first<<" ; ";
         }
         tooutputfile<<endl;
     }
